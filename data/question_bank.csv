@@ -1,0 +1,51 @@
+question_id,topic,correct_option
+Q001,Python,A
+Q002,DBMS,B
+Q003,Operating Systems,B
+Q004,Computer Networks,D
+Q005,Data Structures,C
+Q006,SQL,B
+Q007,Aptitude,C
+Q008,Java,A
+Q009,Python,D
+Q010,DBMS,C
+Q011,Operating Systems,A
+Q012,Computer Networks,B
+Q013,Data Structures,D
+Q014,SQL,C
+Q015,Aptitude,A
+Q016,Java,B
+Q017,Python,C
+Q018,DBMS,D
+Q019,Operating Systems,B
+Q020,Computer Networks,A
+Q021,Data Structures,C
+Q022,SQL,D
+Q023,Aptitude,B
+Q024,Java,C
+Q025,Python,A
+Q026,DBMS,B
+Q027,Operating Systems,C
+Q028,Computer Networks,D
+Q029,Data Structures,A
+Q030,SQL,B
+Q031,Aptitude,C
+Q032,Java,D
+Q033,Python,B
+Q034,DBMS,A
+Q035,Operating Systems,D
+Q036,Computer Networks,C
+Q037,Data Structures,B
+Q038,SQL,A
+Q039,Aptitude,D
+Q040,Java,C
+Q041,Python,C
+Q042,DBMS,D
+Q043,Operating Systems,A
+Q044,Computer Networks,B
+Q045,Data Structures,D
+Q046,SQL,C
+Q047,Aptitude,A
+Q048,Java,B
+Q049,Python,D
+Q050,DBMS,C
