@@ -1,3 +1,7 @@
+import os
+
+if not os.path.exists("database/assessment.db"):
+    exec(open("database/create_db.py").read())
 import streamlit as st
 
 from modules.db_operations import (
