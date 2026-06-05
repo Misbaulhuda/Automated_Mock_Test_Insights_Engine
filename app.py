@@ -1,55 +1,55 @@
 
 # app.py
-
-import streamlit as st
-import pandas as pd
-import sqlite3
-import os
-
-from reports.report_generator import generate_student_report
-
-# -----------------------------------
-# Page Configuration
-# -----------------------------------
-
-st.set_page_config(
-    page_title="Automated Mock Test Insights Engine",
-    page_icon="📊",
-    layout="wide"
-)
-
-# -----------------------------------
-# Title
-# -----------------------------------
-
-st.title("📊 Automated Mock Test Insights Engine")
-st.markdown("Analyze student performance and generate PDF reports.")
-
-# -----------------------------------
-# Database Connection
-# -----------------------------------
-
-DB_PATH = "assessment.db"
-
-
-@st.cache_data
-def load_data():
-    conn = sqlite3.connect(DB_PATH)
-
-    submissions = pd.read_sql(
-        "SELECT * FROM student_submissions",
-        conn
+    
+    import streamlit as st
+    import pandas as pd
+    import sqlite3
+    import os
+    
+    from reports.report_generator import generate_student_report
+    
+    # -----------------------------------
+    # Page Configuration
+    # -----------------------------------
+    
+    st.set_page_config(
+        page_title="Automated Mock Test Insights Engine",
+        page_icon="📊",
+        layout="wide"
     )
-
-    question_bank = pd.read_sql(
-        "SELECT * FROM question_bank",
-        conn
-    )
-
-    conn.close()
-
-    return submissions, question_bank
-
+    
+    # -----------------------------------
+    # Title
+    # -----------------------------------
+    
+    st.title("📊 Automated Mock Test Insights Engine")
+    st.markdown("Analyze student performance and generate PDF reports.")
+    
+    # -----------------------------------
+    # Database Connection
+    # -----------------------------------
+    
+    DB_PATH = "assessment.db"
+    
+    
+    @st.cache_data
+    def load_data():
+        conn = sqlite3.connect(DB_PATH)
+    
+        submissions = pd.read_sql(
+            "SELECT * FROM student_submissions",
+            conn
+        )
+    
+        question_bank = pd.read_sql(
+            "SELECT * FROM question_bank",
+            conn
+        )
+    
+        conn.close()
+    
+        return submissions, question_bank
+    
 
 try:
     submissions_df, questions_df = load_data()
